@@ -7,16 +7,12 @@
 }
 
 html, body{  /* 4° */
-    min-width: 300px;
+    /* min-width: 300px; */
     width: 100vw; /* Largura total da viewport (tela)*/
     height: 100vh; /* Altura total da viewport (tela)*/
     background-color: black;  /* Vai ficar um tampando o outro*/
 }
 
-main{ /* 5° */
-    height: 100vh; /* cobriu porque a margem e o padding estão zerados*/
-    position: relative;
-} 
 
 body{ /* 7° */
     background: url(../imagens/tela-fundo-propria.png) no-repeat top center;
@@ -24,15 +20,20 @@ body{ /* 7° */
     background-attachment: fixed;
 }
 
+main{ /* 5° */
+    position: relative;
+    height: 100vh; /* cobriu porque a margem e o padding estão zerados*/
+} 
+
 section#telefone{ /* 6° */
     position: absolute;
-    height: 627px;
-    width: 311px;
-    background: url(../imagens/frame-poco-x7-1.png) no-repeat top;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background: url(../imagens/frame-poco-x7-1.png) no-repeat;
+
 }
 
 iframe#tela{
@@ -52,9 +53,10 @@ section#redes-sociais{
 
 section#redes-sociais img{
     width: 40px;
+    margin: 6px;
     border-radius: 50%;
     box-shadow: 2px 3px 5px black;
-    margin: 6px;
+    box-sizing: border-box;
 }
 
 section#redes-sociais img:hover{
